@@ -4,7 +4,7 @@ import joblib
 import numpy as np
 
 # Load model artifacts
-model = joblib.load("model.pkl")
+model = joblib.load("model.pkl.gz")
 features = joblib.load("features.pkl")
 threshold = joblib.load("threshold.pkl")
 
@@ -65,4 +65,5 @@ if st.button("Predict Fraud"):
     if prediction == 1:
         st.error("⚠ Fraudulent Transaction Detected")
     else:
+
         st.success("Legitimate Transaction")
